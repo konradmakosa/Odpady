@@ -1,0 +1,55 @@
+﻿2026-06-18T10:42:14.3186813Z ##[group]Run python main.py
+2026-06-18T10:42:14.3187240Z [36;1mpython main.py[0m
+2026-06-18T10:42:14.3241060Z shell: /usr/bin/bash -e ***0***
+2026-06-18T10:42:14.3241449Z env:
+2026-06-18T10:42:14.3241817Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:42:14.3242985Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-06-18T10:42:14.3243552Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:42:14.3244049Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:42:14.3244554Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:42:14.3245259Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-06-18T10:42:14.3245685Z   STREET_ADDRESS: 
+2026-06-18T10:42:14.3246035Z   GEOLOCATION_ID: ***
+2026-06-18T10:42:14.3256487Z   GOOGLE_CREDENTIALS_JSON: ***
+
+2026-06-18T10:42:14.3256887Z   CALENDAR_IDS: ***
+2026-06-18T10:42:14.3257316Z   EMAIL_RECIPIENTS: ***
+
+2026-06-18T10:42:14.3257687Z   SMTP_USERNAME: ***
+
+2026-06-18T10:42:14.3258051Z   SMTP_PASSWORD: ***
+
+2026-06-18T10:42:14.3258354Z   SMTP_SERVER: 
+2026-06-18T10:42:14.3258635Z   SMTP_PORT: 
+2026-06-18T10:42:14.3258911Z ##[endgroup]
+2026-06-18T10:42:14.7942450Z 2026-06-18 10:42:14,793 - __main__ - INFO - Rozpoczynam scrapowanie harmonogramu odpadów...
+2026-06-18T10:42:14.7944229Z 2026-06-18 10:42:14,793 - __main__ - INFO - Używam geolocation_id: ***
+2026-06-18T10:42:21.8002777Z 2026-06-18 10:42:21,799 - __main__ - INFO - Znaleziono 7 terminów wywozu odpadów
+2026-06-18T10:42:21.8003985Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-07-01: Papier
+2026-06-18T10:42:21.8005100Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-07-08: Metale i tworzywa sztuczne
+2026-06-18T10:42:21.8006449Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-07-15: Szkło
+2026-06-18T10:42:21.8007488Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-06-24: Zielone
+2026-06-18T10:42:21.8023154Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-06-24: Bio
+2026-06-18T10:42:21.8023983Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-08-25: Odpady wielkogabarytowe
+2026-06-18T10:42:21.8024722Z 2026-06-18 10:42:21,800 - __main__ - INFO -   - 2026-07-01: Odpady zmieszane
+2026-06-18T10:42:21.8025448Z 2026-06-18 10:42:21,800 - __main__ - INFO - Synchronizacja z Google Calendar...
+2026-06-18T10:42:21.8437501Z 2026-06-18 10:42:21,843 - calendar_sync - INFO - Synchronizacja kalendarza: ***
+2026-06-18T10:42:22.0579531Z 2026-06-18 10:42:22,057 - google.oauth2._client - WARNING - Regional Access Boundary HTTP request failed after retries: response_data=***'error': ***'code': 400, 'message': 'Precondition check failed.', 'status': 'FAILED_PRECONDITION'***, retryable_error=False
+2026-06-18T10:42:22.5261629Z 2026-06-18 10:42:22,525 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Papier
+2026-06-18T10:42:23.0679065Z 2026-06-18 10:42:23,067 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Metale i tworzywa sztuczne
+2026-06-18T10:42:23.3913833Z 2026-06-18 10:42:23,390 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Szkło
+2026-06-18T10:42:23.7984347Z 2026-06-18 10:42:23,798 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Zielone
+2026-06-18T10:42:24.1311253Z 2026-06-18 10:42:24,130 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Bio
+2026-06-18T10:42:24.4646431Z 2026-06-18 10:42:24,464 - calendar_sync - INFO - Usunięto event: Wywóz odpadów: Odpady zmieszane
+2026-06-18T10:42:24.8055887Z 2026-06-18 10:42:24,805 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Papier na 2026-07-01
+2026-06-18T10:42:25.1553829Z 2026-06-18 10:42:25,155 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Metale i tworzywa sztuczne na 2026-07-08
+2026-06-18T10:42:25.4694706Z 2026-06-18 10:42:25,469 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Szkło na 2026-07-15
+2026-06-18T10:42:25.7838549Z 2026-06-18 10:42:25,783 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Zielone na 2026-06-24
+2026-06-18T10:42:26.1763989Z 2026-06-18 10:42:26,176 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Bio na 2026-06-24
+2026-06-18T10:42:26.5940913Z 2026-06-18 10:42:26,593 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Odpady wielkogabarytowe na 2026-08-25
+2026-06-18T10:42:26.9783989Z 2026-06-18 10:42:26,978 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Odpady zmieszane na 2026-07-01
+2026-06-18T10:42:26.9785892Z 2026-06-18 10:42:26,978 - __main__ - INFO - Synchronizacja zakończona pomyślnie!
+2026-06-18T10:42:26.9787241Z 2026-06-18 10:42:26,978 - __main__ - INFO - Generowanie i wysyłka pliku .ics...
+2026-06-18T10:42:26.9790283Z 2026-06-18 10:42:26,978 - email_sender - ERROR - Błąd wysyłki do ***: please run connect() first
+2026-06-18T10:42:26.9793293Z 2026-06-18 10:42:26,979 - email_sender - ERROR - Błąd wysyłki do makosa.kasia@gmail.com: please run connect() first
+2026-06-18T10:42:26.9794727Z 2026-06-18 10:42:26,979 - __main__ - INFO - Wysyłka email zakończona!
