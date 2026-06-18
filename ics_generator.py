@@ -34,8 +34,13 @@ DTSTART;VALUE=DATE:{date.strftime('%Y%m%d')}
 DTEND;VALUE=DATE:{(date + timedelta(days=1)).strftime('%Y%m%d')}
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Przypomnienie o wywozie odpadów
-TRIGGER:-PT2H
+DESCRIPTION:Wywóz odpadów za 2 dni
+TRIGGER:-P2DT15H
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Wywóz odpadów jutro
+TRIGGER:-P1DT15H
 END:VALARM
 END:VEVENT"""
 
