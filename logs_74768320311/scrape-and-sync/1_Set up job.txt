@@ -1,0 +1,32 @@
+﻿2026-06-18T10:26:01.6115972Z Current runner version: '2.335.1'
+2026-06-18T10:26:01.6142768Z ##[group]Runner Image Provisioner
+2026-06-18T10:26:01.6144249Z Hosted Compute Agent
+2026-06-18T10:26:01.6145165Z Version: 20260611.554
+2026-06-18T10:26:01.6146106Z Commit: 5e0782fdc9014723d3be820dd114dd31555c2bd1
+2026-06-18T10:26:01.6147153Z Build Date: 2026-06-11T21:40:46Z
+2026-06-18T10:26:01.6148214Z Worker ID: ***058f7b0a-82c6-4bad-a9e3-8e8670a15dc7***
+2026-06-18T10:26:01.6149322Z Azure Region: westus
+2026-06-18T10:26:01.6150102Z ##[endgroup]
+2026-06-18T10:26:01.6151958Z ##[group]Operating System
+2026-06-18T10:26:01.6152970Z Ubuntu
+2026-06-18T10:26:01.6154184Z 24.04.4
+2026-06-18T10:26:01.6155102Z LTS
+2026-06-18T10:26:01.6155844Z ##[endgroup]
+2026-06-18T10:26:01.6156653Z ##[group]Runner Image
+2026-06-18T10:26:01.6157604Z Image: ubuntu-24.04
+2026-06-18T10:26:01.6158578Z Version: 20260615.205.1
+2026-06-18T10:26:01.6159935Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260615.205/images/ubuntu/Ubuntu2404-Readme.md
+2026-06-18T10:26:01.6162079Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260615.205
+2026-06-18T10:26:01.6163656Z ##[endgroup]
+2026-06-18T10:26:01.6165433Z ##[group]GITHUB_TOKEN Permissions
+2026-06-18T10:26:01.6167685Z Contents: read
+2026-06-18T10:26:01.6168540Z Metadata: read
+2026-06-18T10:26:01.6169449Z Packages: read
+2026-06-18T10:26:01.6170261Z ##[endgroup]
+2026-06-18T10:26:01.6172884Z Secret source: Actions
+2026-06-18T10:26:01.6174230Z Prepare workflow directory
+2026-06-18T10:26:01.6526806Z Prepare all required actions
+2026-06-18T10:26:01.6566973Z Getting action download info
+2026-06-18T10:26:02.0787062Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-06-18T10:26:02.1676524Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-06-18T10:26:02.3450333Z Complete job name: scrape-and-sync

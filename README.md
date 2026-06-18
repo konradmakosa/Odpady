@@ -75,6 +75,24 @@ W repozytorium: **Settings → Secrets and variables → Actions → New reposit
 
 **Uwaga**: Użyj `STREET_ADDRESS` LUB `GEOLOCATION_ID` (nie obu na raz). Jeśli masz już geolocation_id, użyj go - będzie szybciej.
 
+### Opcjonalnie: Wysyłka email z plikiem .ics
+
+Jako dodatkowa metoda (backup), możesz otrzymywać email z plikiem `.ics`, który można dodać do dowolnego kalendarza:
+
+| Nazwa sekretu | Wartość |
+|--------------|---------|
+| `EMAIL_RECIPIENTS` | Adresy email oddzielone przecinkami (np. `konrad.makosa@gmail.com,makosa.kasia@gmail.com`) |
+| `SMTP_USERNAME` | Email nadawcy (np. `konrad.makosa@gmail.com`) |
+| `SMTP_PASSWORD` | Hasło aplikacji Gmail (nie zwykłe hasło!) - [jak wygenerować](https://support.google.com/accounts/answer/185833) |
+| `SMTP_SERVER` | `smtp.gmail.com` (domyślnie) |
+| `SMTP_PORT` | `587` (domyślnie) |
+
+**Jak wygenerować hasło aplikacji Gmail:**
+1. Wejdź w [Google Account](https://myaccount.google.com/) → Security
+2. Włącz 2-Step Verification
+3. Wygeneruj App Password dla "Mail"
+4. Użyj tego hasła jako `SMTP_PASSWORD`
+
 ### 4. Ręczne uruchomienie (test)
 
 ```bash

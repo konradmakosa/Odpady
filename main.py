@@ -7,8 +7,11 @@ import os
 import sys
 import json
 import logging
+from datetime import datetime
 from scraper import WarsawWasteScraper
 from calendar_sync import CalendarSync
+from ics_generator import ICSGenerator
+from email_sender import EmailSender
 
 logging.basicConfig(
     level=logging.INFO,
@@ -64,6 +67,32 @@ def main():
         sync.sync_collections(collections)
 
         _LOGGER.info("Synchronizacja zakończona pomyślnie!")
+
+        # Wysyłka email z plikiem .ics (backup/alternatywa)
+        email_recipients_str = os.environ.get('EMAIL_RECIPIENTS', '')
+        smtp_server = os.environ.get('SMTP_SERVER', 'smtp.gmail.com')
+        smtp_port = int(os.environ.get('SMTP_PORT', '587'))
+        smtp_username = os.environ.get('SMTP_USERNAME')
+        smtp_password = os.environ.get('SMTP_PASSWORD')
+
+        if email_recipients_str and smtp_username and smtp_password:
+            _LOGGER.info("Generowanie i wysyłka pliku .ics...")
+
+            # Generowanie pliku .ics
+            ics_gen = ICSGenerator()
+            ics_gen.add_collections(collections)
+            ics_content = ics_gen.generate()
+
+            # Wysyłka email
+            recipients = [r.strip() for r in email_recipients_str.split(',') if r.strip()]
+            sender = EmailSender(smtp_server, smtp_port, smtp_username, smtp_password)
+
+            month_name = datetime.now().strftime('%B %Y')
+            sender.send_ics_calendar(recipients, ics_content, month_name)
+
+            _LOGGER.info("Wysyłka email zakończona!")
+        else:
+            _LOGGER.info("Brak konfiguracji email - pominięto wysyłkę .ics")
 
     except Exception as e:
         _LOGGER.error(f"Błąd: {e}", exc_info=True)

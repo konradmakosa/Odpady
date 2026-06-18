@@ -2,8 +2,8 @@ name: Scrape Warsaw Waste Schedule
 
 on:
   schedule:
-    # Uruchamiaj codziennie o 6:00 rano
-    - cron: '0 6 * * *'
+    # Uruchamiaj raz na tydzień w poniedziałek o 6:00
+    - cron: '0 6 * * 1'
   workflow_dispatch:  # Ręczne uruchomienie
 
 jobs:
@@ -28,4 +28,9 @@ jobs:
           GEOLOCATION_ID: ${{ secrets.GEOLOCATION_ID }}
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
           CALENDAR_IDS: ${{ secrets.CALENDAR_IDS }}
+          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
         run: python main.py

@@ -1,0 +1,36 @@
+﻿2026-06-18T10:26:08.7092249Z ##[group]Run python main.py
+2026-06-18T10:26:08.7092642Z [36;1mpython main.py[0m
+2026-06-18T10:26:08.7125822Z shell: /usr/bin/bash -e ***0***
+2026-06-18T10:26:08.7126166Z env:
+2026-06-18T10:26:08.7126522Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:26:08.7127051Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib/pkgconfig
+2026-06-18T10:26:08.7127568Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:26:08.7128047Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:26:08.7128505Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.15/x64
+2026-06-18T10:26:08.7128972Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.15/x64/lib
+2026-06-18T10:26:08.7129379Z   STREET_ADDRESS: 
+2026-06-18T10:26:08.7129672Z   GEOLOCATION_ID: ***
+2026-06-18T10:26:08.7139634Z   GOOGLE_CREDENTIALS_JSON: ***
+
+2026-06-18T10:26:08.7139995Z   CALENDAR_IDS: ***
+2026-06-18T10:26:08.7140272Z ##[endgroup]
+2026-06-18T10:26:09.6169764Z 2026-06-18 10:26:09,616 - __main__ - INFO - Rozpoczynam scrapowanie harmonogramu odpadów...
+2026-06-18T10:26:09.6171955Z 2026-06-18 10:26:09,616 - __main__ - INFO - Używam geolocation_id: ***
+2026-06-18T10:26:12.0569820Z 2026-06-18 10:26:12,056 - __main__ - INFO - Znaleziono 7 terminów wywozu odpadów
+2026-06-18T10:26:12.0570902Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-07-01: Papier
+2026-06-18T10:26:12.0571790Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-07-08: Metale i tworzywa sztuczne
+2026-06-18T10:26:12.0573545Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-07-15: Szkło
+2026-06-18T10:26:12.0574528Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-06-24: Zielone
+2026-06-18T10:26:12.0575496Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-06-24: Bio
+2026-06-18T10:26:12.0576833Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-08-25: Odpady wielkogabarytowe
+2026-06-18T10:26:12.0597418Z 2026-06-18 10:26:12,056 - __main__ - INFO -   - 2026-07-01: Odpady zmieszane
+2026-06-18T10:26:12.0598513Z 2026-06-18 10:26:12,056 - __main__ - INFO - Synchronizacja z Google Calendar...
+2026-06-18T10:26:12.1013462Z 2026-06-18 10:26:12,101 - calendar_sync - INFO - Synchronizacja kalendarza: ***
+2026-06-18T10:26:13.5370850Z 2026-06-18 10:26:13,536 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Papier na 2026-07-01
+2026-06-18T10:26:13.9195506Z 2026-06-18 10:26:13,919 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Metale i tworzywa sztuczne na 2026-07-08
+2026-06-18T10:26:14.2989590Z 2026-06-18 10:26:14,298 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Szkło na 2026-07-15
+2026-06-18T10:26:14.6985204Z 2026-06-18 10:26:14,698 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Zielone na 2026-06-24
+2026-06-18T10:26:15.1279712Z 2026-06-18 10:26:15,127 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Bio na 2026-06-24
+2026-06-18T10:26:15.4958374Z 2026-06-18 10:26:15,495 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Odpady wielkogabarytowe na 2026-08-25
+2026-06-18T10:26:15.8099357Z 2026-06-18 10:26:15,809 - calendar_sync - INFO - Dodano event: Wywóz odpadów: Odpady zmieszane na 2026-07-01
+2026-06-18T10:26:15.8100699Z 2026-06-18 10:26:15,809 - __main__ - INFO - Synchronizacja zakończona pomyślnie!
