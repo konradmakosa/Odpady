@@ -1,0 +1,31 @@
+name: Scrape Warsaw Waste Schedule
+
+on:
+  schedule:
+    # Uruchamiaj codziennie o 6:00 rano
+    - cron: '0 6 * * *'
+  workflow_dispatch:  # Ręczne uruchomienie
+
+jobs:
+  scrape-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        env:
+          STREET_ADDRESS: ${{ secrets.STREET_ADDRESS }}
+          GEOLOCATION_ID: ${{ secrets.GEOLOCATION_ID }}
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          CALENDAR_IDS: ${{ secrets.CALENDAR_IDS }}
+        run: python main.py
