@@ -5,9 +5,11 @@ Automatyczna synchronizacja harmonogramu wywozu odpadów z [warszawa19115.pl](ht
 ## Funkcjonalność
 
 - **Scrapowanie**: Pobiera dane o wywozie odpadów z oficjalnej platformy MPO Warszawa
-- **Synchronizacja**: Dodaje terminy do Google Calendar z przypomnieniami (dzień wcześniej email, 2h przed popup)
+- **Synchronizacja**: Dodaje terminy do Google Calendar przez API lub wysyła plik `.ics` emailem
 - **Wielokalendarzowość**: Obsługa kilku kalendarzy (np. Twój i żony)
-- **Automatyzacja**: Uruchamia się codziennie o 6:00 przez GitHub Actions
+- **Email z .ics**: Alternatywna metoda - wysyła plik kalendarza do dodania ręcznie
+- **Przypomnienia**: Dwa przypomnienia w pliku .ics (2 dni przed i dzień przed o 9:00)
+- **Automatyzacja**: Uruchamia się raz na tydzień w poniedziałek o 6:00 przez GitHub Actions
 
 ## Wymagane typy odpadów
 
